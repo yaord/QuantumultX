@@ -25,5 +25,4 @@ function filterAD() {
     
 }
 
-//完结时
 $done({ body });

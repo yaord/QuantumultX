@@ -1,31 +1,29 @@
-// //$notify("知乎","回答","新回答")
-// console.log("+++++++++++++++++++++++++++开始++++++++++++++++++++++++++++");
+const url = $request.url;
+const answerIdRegx = /\d{7,10}/;
 
-// const url = $request.url;
 let body = $response.body;
-// const headRegx = /\<(\s)*div(\s)*class(\s)*\=(\s)*\"ListItemLoading\"(\s)*\>/;
-// const allRegex = /\<(\s)*div(\s)*class(\s)*\=(\s)*\"ListItemLoading\"(\s)*\>(.|\n)+\<(\s)*div(\s)*class(\s)*\=(\s)*\"ListItemLoading\-img\"(\s)*\>(\s)*\<\/div\>(\s)*\<\/div\>(\s)*\<\/div\>/;
-// body = filterAD();
+const headRegx = /\<(\s)*div(\s)*class(\s)*\=(\s)*\"ListItemLoading\"(\s)*\>/;
+const allRegex = /\<(\s)*div(\s)*class(\s)*\=(\s)*\"ListItemLoading\"(\s)*\>(.|\n)+\<(\s)*div(\s)*class(\s)*\=(\s)*\"ListItemLoading\-img\"(\s)*\>(\s)*\<\/div\>(\s)*\<\/div\>(\s)*\<\/div\>/;
+body = filterAD();
 
-// console.log("网址：" + url);
-// function filterAD() {
-//     try {
-//         let matchStr = body.match(headRegx);
-//         if(matchStr == null | matchStr == undefined | matchStr == "") {
-//             console.log("1.未找到最外层元素 class:ListItemLoading");
-//             return body;
-//         }
+function filterAD() {
+    try {
+        let matchStr = body.match(headRegx);
+        if(matchStr == null | matchStr == undefined | matchStr == "") {
+            $notify("广告页面元素定位失败", "error", "当前文章链接：" + url);
+            return body;
+        }
 
-//         let target = body.match(allRegex)[0];
-//         console.log("2.找到目标：" + target);
-//         //只替换一次
-//         return body.replace(target,"");
-//     } catch (error) {
-//         console.log("错误：" + error);
-//     }
+        let target = body.match(allRegex)[0];
+        console.log("[yaord:noAD:SUCCESS ] answerId=" + url.match(answerIdRegx)[0]);
+        //只替换一次
+        return body.replace(target,"");
+    } catch (error) {
+        console.log("[yaord:noAD:ERROR ] " + error);
+        $notify("广告页面元素定位失败", "error", "当前文章链接：" + url);
+    }
     
-// }
+}
 
-// console.log("+++++++++++++++++++++++++++结束++++++++++++++++++++++++++++");
-// //完结时
+//完结时
 $done({ body });

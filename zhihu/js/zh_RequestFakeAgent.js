@@ -13,9 +13,9 @@ try {
     headers['dnt']=1;
     headers['upgrade-insecure-requests']=1;
     headers['exchange']='v=b3';
-    console.log("[yaord:SUCCESS ] answerId=" + url.match(answerIdRegx)[0]);
+    console.log("[yaord:noAgent:SUCCESS ] answerId=" + url.match(answerIdRegx)[0]);
 } catch (error) {
-    console.log("[yaord:ERROR ] " + error);
+    console.log("[yaord:noAgent:ERROR ] " + error);
     $notify("客户端伪装失败", "error", "当前文章链接：" + url);
 }finally{
     $done({ url:url,headers:headers});

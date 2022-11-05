@@ -7,9 +7,10 @@ const userAgent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML
 
 try {
     console.log("================================开始==========================");
-    console.log('user-agent = ' + headers.user-agent);
-    console.log('accept-language = ' + headers.accept-language);
-    
+    for(let obj in headers){
+        console.log(obj);
+    }
+
 } catch (error) {
     console.log("[出现错误：]" + error);
 }finally{

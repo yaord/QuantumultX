@@ -7,4 +7,4 @@ console.log("请求头接受测试");
 console.log(headers);
 console.log(typeof headers);
 //完结时
-$done({ url });
+$done({ headers });

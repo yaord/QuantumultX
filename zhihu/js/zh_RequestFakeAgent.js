@@ -30,13 +30,24 @@ try {
     // }
 
     //自定义头部
-    headers['x-app-za']="";
-    headers['User-Agent']=userAgent;
-    headers['x-hybrid-config']="";
-    headers['X-Network-Type']="5G";
-    headers['x-app-version']="";
-    headers['Accept-Language']="zh-CN,zh;q=0.9";
-    headers['X-MS-ID']="";
+    // headers['x-app-za']="";
+    // headers['User-Agent']=userAgent;
+    // headers['x-hybrid-config']="";
+    // headers['X-Network-Type']="5G";
+    // headers['x-app-version']="";
+    // headers['Accept-Language']="zh-CN,zh;q=0.9";
+    // headers['X-MS-ID']="";
+
+        delete headers['x-app-za'];
+        delete headers['x-hybrid-config'];
+        delete headers['X-Network-Type']
+        delete headers['x-app-version'];
+        delete headers['X-MS-ID'];
+        delete headers['Authorization'];
+        headers['dnt']=1;
+        headers['upgrade-insecure-requests']=1;
+        headers['exchange']='v=b3';
+
     /*
         删除属性 即模拟浏览器
         delete headers['x-app-za'];

@@ -20,9 +20,10 @@ if(
         for(let header in headers){
             headers[header]='';
         }
-        console.log("屏蔽隐私连接 :" + url);
+        console.log("[yaord:FilterPRIVACY:SUCCESS ] url=" + url);
     } catch (error) {
-        console.log("屏蔽连接错误error= :" + error + " ,url=" + url);
+        cconsole.log("[yaord:FilterPRIVACY:ERROR ] " + error);
+        $notify("屏蔽隐私请求失败", "error", "请求url=" + url);
     }
 
 }

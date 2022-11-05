@@ -12,7 +12,7 @@ function filterAD() {
     try {
         let matchStr = body.match(headRegx);
         if(matchStr == null | matchStr == undefined | matchStr == "") {
-            console.error("1.未找到最外层元素 class:ListItemLoading");
+            console.log("1.未找到最外层元素 class:ListItemLoading");
             return body;
         }
 

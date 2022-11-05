@@ -1,5 +1,5 @@
 //$notify("知乎","回答","新回答")
-console.error("+++++++++++++++++++++++++++开始++++++++++++++++++++++++++++");
+console.log("+++++++++++++++++++++++++++开始++++++++++++++++++++++++++++");
 
 const url = $request.url;
 let body = $response.body;
@@ -7,7 +7,7 @@ const headRegx = /\<(\s)*div(\s)*class(\s)*\=(\s)*\"ListItemLoading\"(\s)*\>/;
 const allRegex = /\<(\s)*div(\s)*class(\s)*\=(\s)*\"ListItemLoading\"(\s)*\>(.|\n)+\<(\s)*div(\s)*class(\s)*\=(\s)*\"ListItemLoading\-img\"(\s)*\>(\s)*\<\/div\>(\s)*\<\/div\>(\s)*\<\/div\>/;
 body = filterAD();
 
-
+console.log("网址：" + url);
 function filterAD() {
     try {
         let matchStr = body.match(headRegx);
@@ -26,14 +26,7 @@ function filterAD() {
     
 }
 
-console.warn("+++++++++++++++++++++++++++结束++++++++++++++++++++++++++++");
+console.log("+++++++++++++++++++++++++++结束++++++++++++++++++++++++++++");
 //完结时
 $done({ body });
 
-
-
-/*
-
-    参考文档：https://zhuanlan.zhihu.com/p/352724534
- 
-*/

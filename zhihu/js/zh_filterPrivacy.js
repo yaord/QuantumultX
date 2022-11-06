@@ -28,4 +28,4 @@ if(
     }
 
 }
-$done({ path:"",headers:headers});
+$done({ headers:headers});

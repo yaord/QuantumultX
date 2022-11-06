@@ -27,7 +27,7 @@ function filterAD() {
 
 const myRequest = {
     url: 'https://autumnfish.cn/song/url?id=211',
-    method: "GET", // Optional, default GET.
+    method: "GET"// Optional, default GET.
     //headers: headers, // Optional.
     //body: JSON.stringify(data) // Optional.
 };

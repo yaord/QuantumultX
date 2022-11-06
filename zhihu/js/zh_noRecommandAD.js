@@ -7,6 +7,7 @@ try {
 
     if(obj.data) obj.data=[];
     if(obj.paging) obj.paging=[];
+    if(obj.ad_info) obj.ad_info=[];
     body = JSON.stringify(obj);
     console.log("[yaord:noRecomAD:SUCCESS ] answerId=" + url.match(answerIdRegx)[0]);
 } catch (error) {

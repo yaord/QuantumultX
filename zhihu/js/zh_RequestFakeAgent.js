@@ -39,8 +39,8 @@ function removeAD() {
     //     delete headers['X-Ab-Param'];
     // }
     if(headers['x-ad']) {
-        //delete headers['x-ad'];
-        headers['x-ad']="";
+        delete headers['x-ad'];
+        // headers['x-ad']="";
     }
     // if(headers['X-Zse-84']) {
     //     delete headers['X-Zse-84'];
@@ -49,8 +49,8 @@ function removeAD() {
     //     delete headers['X-B3-Traceid'];
     // }
     if(headers['x-ad-styles']) {
-        // delete headers['x-ad-styles'];
-        headers['x-ad-styles']="";
+        delete headers['x-ad-styles'];
+        // headers['x-ad-styles']="";
     }
     
     // if(headers['X-UDID']) {

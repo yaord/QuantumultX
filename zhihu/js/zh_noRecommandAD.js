@@ -7,7 +7,14 @@ try {
 
     if(obj.data) obj.data=[];
     if(obj.paging) obj.paging=[];
-    if(obj.ad_info) obj.ad_info=[];
+    if(obj.ad_info) {
+        console.log("去除回答列表广告！")
+        //obj.ad_info=[]; 会导致app崩溃
+        obj.ad_info.position=-1;
+        obj.ad_info.ad=[];
+        obj.ad_info.adjson=[];
+
+    }
     body = JSON.stringify(obj);
     console.log("[yaord:noRecomAD:SUCCESS ] answerId=" + url.match(answerIdRegx)[0]);
 } catch (error) {

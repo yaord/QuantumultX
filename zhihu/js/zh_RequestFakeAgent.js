@@ -35,9 +35,9 @@ function removeAD() {
     // if(headers['X-APP-VersionCode']) {
     //     delete headers['X-APP-VersionCode'];
     // }
-    // if(headers['X-Ab-Param']) {
-    //     delete headers['X-Ab-Param'];
-    // }
+    if(headers['X-Ab-Param']) {
+        delete headers['X-Ab-Param'];
+    }
     if(headers['x-ad']) {
         delete headers['x-ad'];
         // headers['x-ad']="";

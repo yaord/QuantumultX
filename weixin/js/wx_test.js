@@ -5,7 +5,7 @@ const ua = "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/6
 let headers = $request.headers;
 let path = $request.path;
 
-headers['user-agent']=userAgent;
+headers['User-Agent']=userAgent;
 headers['Content-Type']=contentType;
 console.log("伪装 mmtls，其中url=" + url);
 $done({ headers:headers});

@@ -3,6 +3,7 @@ const answerIdRegx = /\d{7,10}/;
 let body = $response.body;
 
 try {
+    console.log(body);
     let obj = JSON.parse(body);
 
     if(obj.data) obj.data=[];

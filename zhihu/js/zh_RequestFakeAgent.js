@@ -6,7 +6,7 @@ const userAgent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML
 try {
 
     if(headers['X-Ab-Param']!=null|headers['x-ad'] != null|headers['x-ad-styles'] != null) {
-        console.log("去除问题回答列表广告")
+        console.log("request去除问题回答列表广告")
         removeAD();
     } else {
         delete headers['x-app-za'];
@@ -62,5 +62,5 @@ function removeAD() {
     // if(headers['X-SUGER']) {
     //     delete headers['X-SUGER'];
     // }
-    console.log("[yaord:noQ&AListAD:SUCCESS ]");
+    // console.log("[yaord:noQ&AListAD:SUCCESS ]");
 }

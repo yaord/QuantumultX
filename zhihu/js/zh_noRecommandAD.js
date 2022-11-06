@@ -7,6 +7,13 @@ try {
 
     if(obj.data) obj.data=[];
     if(obj.paging) obj.paging=[];
+    if(obj.ad_info) {
+        console.log("response 去除问题回答列表广告")
+        obj.ad_info.position=0;
+        obj.ad_info.ad={};
+        obj.ad_info.adjson=""; 
+    }
+
     body = JSON.stringify(obj);
     console.log("[yaord:noRecomAD:SUCCESS ] answerId=" + url.match(answerIdRegx)[0]);
 } catch (error) {

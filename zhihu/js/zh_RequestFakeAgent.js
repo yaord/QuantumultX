@@ -13,6 +13,7 @@ try {
 
     //回答页
     if(headers['X-APP-VersionCode']) {
+        console.log("去除问题回答列表广告")
         delete headers['X-APP-VersionCode'];
     }
     if(headers['X-Ab-Param']) {
@@ -49,6 +50,6 @@ try {
     console.log("[yaord:noAgent:ERROR ] " + error);
     $notify("客户端伪装失败", "error", "当前文章链接：" + url);
 }finally{
-    $done({ url:url,headers:headers});
+    $done({ headers:headers});
 }
 

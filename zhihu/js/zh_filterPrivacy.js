@@ -23,9 +23,9 @@ if(
             headers[header]='';
         }
         
-        console.log("[yaord:FilterPRIVACY:SUCCESS ] url=" + url);
+        console.log("[zh:FilterPRIVACY:SUCCESS ] url=" + url);
     } catch (error) {
-        console.log("[yaord:FilterPRIVACY:ERROR ] " + error);
+        console.log("[zh:FilterPRIVACY:ERROR ] " + error);
         $notify("屏蔽隐私请求失败", "error", "请求url=" + url);
     }
 

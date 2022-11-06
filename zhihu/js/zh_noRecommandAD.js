@@ -16,9 +16,9 @@ try {
     }
 
     body = JSON.stringify(obj);
-    console.log("[yaord:noRecomAD:SUCCESS ] answerId=" + url.match(answerIdRegx)[0]);
+    console.log("[zh:noRecomAD:SUCCESS ] answerId=" + url.match(answerIdRegx)[0]);
 } catch (error) {
-    console.log("[yaord:noRecomAD:ERROR ]" + error);
+    console.log("[zh:noRecomAD:ERROR ]" + error);
     $notify("推荐广告去除失败", "error", "当前文章链接：" + url);
 } finally {
     $done({ body });

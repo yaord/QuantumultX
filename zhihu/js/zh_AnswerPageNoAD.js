@@ -15,11 +15,11 @@ function filterAD() {
         }
 
         let target = body.match(allRegex)[0];
-        console.log("[yaord:noAD:SUCCESS ] answerId=" + url.match(answerIdRegx)[0]);
+        console.log("[zh:noAD:SUCCESS ] answerId=" + url.match(answerIdRegx)[0]);
         //只替换一次
         return body.replace(target,"");
     } catch (error) {
-        console.log("[yaord:noAD:ERROR ] " + error);
+        console.log("[zh:noAD:ERROR ] " + error);
         $notify("广告页面元素定位失败", "error", "当前文章链接：" + url);
     }
     

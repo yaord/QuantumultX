@@ -23,7 +23,7 @@ try {
     }
     
 } catch (error) {
-    console.log("[yaord:noAgent:ERROR ] " + error);
+    console.log("[zh:noAgent:ERROR ] " + error);
     $notify("客户端伪装失败", "error", "当前文章链接：" + url);
 }finally{
     $done({ headers:headers});

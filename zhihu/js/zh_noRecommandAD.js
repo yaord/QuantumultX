@@ -21,5 +21,5 @@ try {
     console.log("[yaord:noRecomAD:ERROR ]" + error);
     $notify("推荐广告去除失败", "error", "当前文章链接：" + url);
 } finally {
-    $done({ body:obj });
+    $done({ body });
 }

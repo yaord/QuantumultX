@@ -9,10 +9,11 @@ try {
     if(obj.paging) obj.paging=[];
     if(obj.ad_info) {
         console.log("去除回答列表广告！")
+        delete obj.ad_info;
         //obj.ad_info=[]; 会导致app崩溃
-        obj.ad_info.position=-1;
-        obj.ad_info.ad=[];
-        obj.ad_info.adjson=[];
+        // obj.ad_info.position;
+        // obj.ad_info.ad;
+        // obj.ad_info.adjson;
 
     }
     body = JSON.stringify(obj);

@@ -4,6 +4,7 @@ const path3 = "/ad-style-service/request";
 //const path4 = "/zst/events/r";
 const path5 = "/ab/api/v1/config";
 const path6 = "/me/guides";
+const path7 = "/api/env/check";
 const url = $request.url;
 let headers = $request.headers;
 
@@ -13,7 +14,8 @@ if(
     url.indexOf(path3) != -1|
     //url.indexOf(path4) != -1|
     url.indexOf(path5) != -1|
-    url.indexOf(path6) != -1
+    url.indexOf(path6) != -1|
+    url.indexOf(path7) != -1
 ) {
     
     try {

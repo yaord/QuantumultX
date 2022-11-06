@@ -36,8 +36,10 @@ const myRequest = {
 $task.fetch(myRequest).then(response => {
     console.log("请求：" + response.body);
     $notify("Title", "Subtitle", "成功");
+    $done();
 }, reason => {
     console.log("请求错误：" + reason.error);
+    $done();
 });
 
 $done({ body });

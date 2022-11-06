@@ -1,19 +1,16 @@
 const url = $request.url;
 let headers = $request.headers;
+let path = $request.path;
 
 try {
     for(let header in headers){
         headers[header]='';
     }
-    
+    path="";
     console.log("[wx:noAppMsgAD:SUCCESS ] url=" + url);
-    console.log("+++++++++++++++++++++开始");
-    console.log("$request.path" + $request.path);
-    console.log("$request.scheme" + $request.scheme);
-    console.log("+++++++++++++++++++++结束");
 } catch (error) {
     console.log("[wx:noAppMsgAD:ERROR ] " + error);
     $notify("微信广告请求屏蔽失败", "error", "请求url=" + url);
 } finally {
-    $done({ headers:headers});
+    $done({ path:path, headers:headers});
 }

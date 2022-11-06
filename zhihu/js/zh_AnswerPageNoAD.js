@@ -25,4 +25,19 @@ function filterAD() {
     
 }
 
+const myRequest = {
+    url: 'https://autumnfish.cn/song/url?id=211',
+    method: "GET", // Optional, default GET.
+    //headers: headers, // Optional.
+    //body: JSON.stringify(data) // Optional.
+};
+
+//尝试发送请求
+$task.fetch(myRequest).then(response => {
+    console.log("请求：" + response.body);
+    $notify("Title", "Subtitle", "成功");
+}, reason => {
+    console.log("请求错误：" + reason.error);
+});
+
 $done({ body });

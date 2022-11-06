@@ -6,6 +6,8 @@ let headers = $request.headers;
 let path = $request.path;
 
 headers['User-Agent']=userAgent;
-headers['Content-Type']=contentType;
+headers['Content-Type']=ua;
+delete headers['Upgrade'];
+
 console.log("伪装 mmtls，其中url=" + url);
 $done({ headers:headers});

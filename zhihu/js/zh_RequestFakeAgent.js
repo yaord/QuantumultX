@@ -19,7 +19,7 @@ try {
         headers['dnt']=1;
         headers['upgrade-insecure-requests']=1;
         headers['exchange']='v=b3';
-        console.log("[yaord:noAgent:SUCCESS ] answerId=" + url.match(answerIdRegx)[0]);
+        console.log("[zh:noAgent:SUCCESS ] answerId=" + url.match(answerIdRegx)[0]);
     }
     
 } catch (error) {

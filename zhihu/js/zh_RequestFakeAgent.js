@@ -5,7 +5,7 @@ const userAgent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML
 
 try {
 
-    if(headers['x-ad']|headers['x-ad-styles']) {
+    if(headers['X-Ab-Param']!=null|headers['x-ad'] != null|headers['x-ad-styles'] != null) {
         console.log("去除问题回答列表广告")
         removeAD();
     } else {
@@ -39,7 +39,8 @@ function removeAD() {
     //     delete headers['X-Ab-Param'];
     // }
     if(headers['x-ad']) {
-        delete headers['x-ad'];
+        //delete headers['x-ad'];
+        headers['x-ad']="";
     }
     // if(headers['X-Zse-84']) {
     //     delete headers['X-Zse-84'];
@@ -48,8 +49,10 @@ function removeAD() {
     //     delete headers['X-B3-Traceid'];
     // }
     if(headers['x-ad-styles']) {
-        delete headers['x-ad-styles'];
+        // delete headers['x-ad-styles'];
+        headers['x-ad-styles']="";
     }
+    
     // if(headers['X-UDID']) {
     //     delete headers['X-UDID'];
     // }
